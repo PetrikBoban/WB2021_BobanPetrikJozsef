@@ -1,0 +1,4 @@
+vue creator command: (open folder in terminal)
+npm create vue@latest
+cd [nev]
+npm i
