@@ -1,0 +1,40 @@
+create laravel:
+
+composer create-project laravel/laravel Boban_Petrik_Jozsef_backend
+
+.env filet mindig szerkeszteni kell telepites utan
+
+tábla létrehozás
+
+php artisan make:model kategoria -m
+
+kapcsolok
+
+m létrehoz migracio
+c létrehoz controllert is
+--api crud muveletek fuggvenyek 
+
+
+models-ben át kell irni ha nem hasznalunk alap modelst. app/models
+
+
+migracio futtatása
+ php artisan migrate --seed 
+
+
+api modul telepitese:
+
+ php artisan install:api
+
+
+postman tesztelés:
+
+új kollekció létrehozása
+add request 
+api route utvonal (php artisan serve)
+
+beadás előtt:
+gitignore ban
+
+visszaállítani:
+composer i
