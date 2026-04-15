@@ -1,5 +1,5 @@
 <template>
-    div class="container">
+    <div class="container">
         <h1 class="text-center">Lista kategóriára szűrve</h1>
         <p>GET kérés küldése a <code>/api/kategoriak/{id}</code> végpontra</p>
         <p>A táblázatban megjelenik a módosítás és a törlég gomb is.</p>
@@ -39,6 +39,7 @@
                     </td>
                 </tr>
         </table>
+    </div>
  </template>
         <script>
         import axios from "axios";
@@ -74,11 +75,22 @@
                 },
                 modositTura(id) {
                     // Itt implementálhatod a módosítás logikáját
-                    alert(`Módosítandó túra ID: ${id}`);
+                    //alert(`Módosítandó túra ID: ${id}`);
+                    this.$router.push({ name: 'Update', params: { id }});
                 },
                 torolTura(id) {
                     // Itt implementálhatod a törlés logikáját
-                    alert(`Törlendő túra ID: ${id}`);
+                    if (confirm("Biztosan törölni szeretnéd ezt a túrát?")) {
+                        axios.delete(`/turak/${id}`)
+                            .then(() => {
+                                // Sikeres törlés után frissítheted a túralistát
+                                this.lekerdezturakategoria();
+                            })
+                            .catch((error) => {
+                                console.error("Hiba a túra törlésekor:", error);
+                            });
+                    }
+                   // alert(`Törlendő túra ID: ${id}`);
                 },
             },
         };

@@ -6,5 +6,7 @@
         <router-link to="/list" class="btn btn-secondary">List</router-link>
         <br>
         <router-link to="/category" class="btn btn-success">Category</router-link>
+        <br>
+        <router-link to="/add" class="btn btn-primary">Új túra</router-link>
     </div>
 </template>
