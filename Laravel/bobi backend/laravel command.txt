@@ -1,3 +1,5 @@
+https://youtu.be/Ulv3NfmXUyo?is=k--1hv6cUEnxTIn4
+
 create laravel:
 
 composer create-project laravel/laravel Boban_Petrik_Jozsef_backend
@@ -6,7 +8,7 @@ composer create-project laravel/laravel Boban_Petrik_Jozsef_backend
 
 tábla létrehozás
 
-php artisan make:model kategoria -m
+php artisan make:model (megadott tabla nev) -m
 
 kapcsolok
 
@@ -37,4 +39,4 @@ beadás előtt:
 gitignore ban
 
 visszaállítani:
-composer i
+composer i                  
