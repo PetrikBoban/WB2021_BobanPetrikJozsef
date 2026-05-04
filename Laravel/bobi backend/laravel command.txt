@@ -31,6 +31,9 @@ api modul telepitese:
 
 postman tesztelés:
 
+
+(bootstrap app.php-ba bele kell irni az api.php route-ot api: __DIR__.'/../routes/api.php',  )
+
 új kollekció létrehozása
 add request 
 api route utvonal (php artisan serve)
