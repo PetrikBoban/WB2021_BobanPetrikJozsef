@@ -25,6 +25,16 @@ composer remove laravel/sanctum
 
 3. tábla létrehozás (nagy betu egyes szam utana rename)
 {
+
+kapcsolok
+(
+	m létrehoz migracio
+	c létrehoz controller
+	--api crud muveletek fuggvenyek 
+)
+
+
+
 php artisan make:model -m Kategoria 
 php artisan make:model -mc --api Ingatlan
 	
@@ -61,12 +71,7 @@ ingatlan végére:
         return $this->belongsTo(Kategoria::class, 'kategoria');
     }
 
-kapcsolok
-(
-	m létrehoz migracio
-	c létrehoz controller
-	--api crud muveletek fuggvenyek 
-)
+
 
 
 
