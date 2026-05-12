@@ -113,9 +113,31 @@ GET: (controllerben)
 
 return Ingatlan::with('kategoria')->get();
 
+ha csak önmagát hivja meg: 
+
+return Ingatlan::all();
 
 
 Route::get('/ingatlan', [\App\Http\Controllers\IngatlanController::class, 'index']);
+
+SHOW:
+
+public function show($id)
+    {
+        $game = Game::find($id);
+
+        if (!$game)
+        {
+            return response()->json([
+                'message' => 'Game not found'
+            ], 404);
+        }
+        return response()->json($game, 200);
+    }
+
+
+Route::get('/games/{id}', [\App\Http\Controllers\GameController::class, 'show']);
+
 
 STORE: 
 use Illuminate\Support\Facades\Validator;
