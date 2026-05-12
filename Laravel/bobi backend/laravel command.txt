@@ -112,7 +112,7 @@ migracio futtatása:
 GET: (controllerben)
 
 return Ingatlan::with('kategoria')->get();
-ll
+
 
 
 Route::get('/ingatlan', [\App\Http\Controllers\IngatlanController::class, 'index']);
