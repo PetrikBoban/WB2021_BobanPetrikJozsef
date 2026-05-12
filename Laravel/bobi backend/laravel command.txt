@@ -47,16 +47,20 @@ foreign kulcs =
 
 $table->foreignId('kategoria')->references('id')->on('kategoriak');
 
-$table->foreignId('jelenlegi tabla')->references('kapcsolo tabla')->on('masik tabla')
+$table->foreignId('masik tabla model')->references('kapcsolo tabla pl:id')->on('masik tabla migrations')
 
 $table->date('hirdetesDatuma')->nullable()->useCurrent();
 
+$table->boolean('');
+$table->integer('');
+$table->string('');
+$table->id();
 
 }
 
 5. Models:
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-
+ 
  use HasFactory;
     public $table = 'kategoriak';
     public $timestamps = false;
@@ -108,6 +112,10 @@ migracio futtatása:
 GET: (controllerben)
 
 return Ingatlan::with('kategoria')->get();
+ll
+
+
+Route::get('/ingatlan', [\App\Http\Controllers\IngatlanController::class, 'index']);
 
 STORE: 
 use Illuminate\Support\Facades\Validator;
